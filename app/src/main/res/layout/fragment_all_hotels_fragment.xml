@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.AllHotelsFragments">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/topHotel_cardview_appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="10dp"
+            tools:targetApi="lollipop">
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/allHotels_backBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@color/white"
+                        android:contentDescription="@string/allhotels"
+                        android:src="@drawable/ic_back_arrow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/hotel_titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/hotels"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/allHotelslayout_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topHotel_cardview_appBar">
+
+            <ImageView
+                android:id="@+id/allHotelsLocationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:contentDescription="@string/allhotels"
+                android:src="@drawable/ic_location_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#FCEA0707" />
+
+            <TextView
+                android:id="@+id/allHotelsLocationTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/allHotelsLocationIcon"
+                app:layout_constraintStart_toEndOf="@+id/allHotelsLocationIcon"
+                app:layout_constraintTop_toTopOf="@+id/allHotelsLocationIcon" />
+
+            <ImageView
+                android:id="@+id/allHotels_filter_icon"
+                android:layout_width="27dp"
+                android:layout_height="23dp"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="@id/allHotels_filter"
+                app:layout_constraintEnd_toStartOf="@+id/allHotels_filter"
+                app:layout_constraintTop_toTopOf="@id/allHotels_filter"
+                app:tint="#FCEA0707"
+                android:contentDescription="@string/allhotels"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:id="@+id/allHotels_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:boxBackgroundMode="filled"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/allHotelsLocationIcon"
+                app:layout_constraintBottom_toBottomOf="@id/allHotelsLocationIcon">
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/allHotels_filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:text="@string/filter_by"
+                    android:textColor="#FCEA0707"
+                    android:layout_weight="1"
+                    android:inputType="none"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/allHotels_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/allHotelslayout_text"
+            tools:listitem="@layout/fragment_all_hotels_item"/>
+
+    <ProgressBar
+        android:id="@+id/fragment_allHotels_progressBar_pb"
+        style="?attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="356dp"
+        android:background="@android:color/transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/tv_notification_allHotels"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c_red"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_allHotels_progressBar_pb"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

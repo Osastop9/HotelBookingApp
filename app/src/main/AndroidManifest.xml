@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.decagon.hbapplicationgroupa">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:name="com.decagon.hbapplicationgroupa.application.HotelApplication"
+        android:allowBackup="true"
+        android:screenOrientation="portrait"
+        android:icon="@mipmap/logo_round"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HBApplicationGroupA">
+        <activity
+            android:exported="true"
+            android:name="com.decagon.hbapplicationgroupa.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <nav-graph android:value="@navigation/navigation_graph"/>
+        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="co.paystack.android.PublicKey"
+            android:value="pk_test_515f61d7b258bbc0cfcd1367e2a62c1ca5d267b0"/>
+    </application>
+</manifest>

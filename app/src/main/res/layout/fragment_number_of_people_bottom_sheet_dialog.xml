@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="16dp"
+    tools:context=".ui.NumberOfPeopleBottomSheetDialogFragment">
+
+    <TextView
+        android:id="@+id/cancel_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Done"
+        android:textColor="@color/splash_screen_background_color"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancel_button" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="16dp"
+        android:background="#EAEAEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancel_button" />
+
+    <TextView
+        android:id="@+id/adult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Adults"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/adult_age_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="16+ years"
+        app:layout_constraintStart_toStartOf="@+id/adult"
+        app:layout_constraintTop_toBottomOf="@+id/adult" />
+
+    <ImageView
+        android:id="@+id/adult_minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_remove_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/adult_number_count"
+        app:layout_constraintEnd_toEndOf="@+id/adult_number_count"
+        app:layout_constraintTop_toTopOf="@+id/adult_number_count" />
+
+    <TextView
+        android:id="@+id/adult_number_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/adult_add_button"
+        app:layout_constraintEnd_toStartOf="@+id/adult_add_button"
+        app:layout_constraintTop_toTopOf="@+id/adult_add_button" />
+
+    <ImageView
+        android:id="@+id/adult_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/adult_age_range"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/adult" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="#EAEAEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adult_age_range" />
+
+    <TextView
+        android:id="@+id/teen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Teens"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <TextView
+        android:id="@+id/teen_age_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12-15 years"
+        app:layout_constraintStart_toStartOf="@+id/teen"
+        app:layout_constraintTop_toBottomOf="@+id/teen" />
+
+    <ImageView
+        android:id="@+id/teen_minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_remove_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/teen_number_count"
+        app:layout_constraintEnd_toEndOf="@+id/teen_number_count"
+        app:layout_constraintTop_toTopOf="@+id/teen_number_count" />
+
+    <TextView
+        android:id="@+id/teen_number_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/teen_add_button"
+        app:layout_constraintEnd_toStartOf="@+id/teen_add_button"
+        app:layout_constraintTop_toTopOf="@+id/teen_add_button" />
+
+    <ImageView
+        android:id="@+id/teen_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/teen_age_range"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/teen" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="#EAEAEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teen_age_range" />
+
+    <TextView
+        android:id="@+id/children"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Children"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/children_age_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2-11 years"
+        app:layout_constraintStart_toStartOf="@+id/children"
+        app:layout_constraintTop_toBottomOf="@+id/children" />
+
+    <ImageView
+        android:id="@+id/children_minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_remove_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/children_number_count"
+        app:layout_constraintEnd_toEndOf="@+id/children_number_count"
+        app:layout_constraintTop_toTopOf="@+id/children_number_count" />
+
+    <TextView
+        android:id="@+id/children_number_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/children_add_button"
+        app:layout_constraintEnd_toStartOf="@+id/children_add_button"
+        app:layout_constraintTop_toTopOf="@+id/children_add_button" />
+
+    <ImageView
+        android:id="@+id/children_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/children_age_range"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/children" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="8dp"
+        android:background="#EAEAEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/children_age_range" />
+
+    <TextView
+        android:id="@+id/infants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Infants"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/infants_age_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="under 2 years"
+        app:layout_constraintStart_toStartOf="@+id/infants"
+        app:layout_constraintTop_toBottomOf="@+id/infants" />
+
+    <ImageView
+        android:id="@+id/infants_minus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_remove_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/infants_number_count"
+        app:layout_constraintEnd_toEndOf="@+id/infants_number_count"
+        app:layout_constraintTop_toTopOf="@+id/infants_number_count" />
+
+    <TextView
+        android:id="@+id/infants_number_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/infants_add_button"
+        app:layout_constraintEnd_toStartOf="@+id/infants_add_button"
+        app:layout_constraintTop_toTopOf="@+id/infants_add_button" />
+
+    <ImageView
+        android:id="@+id/infants_add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintBottom_toBottomOf="@+id/infants_age_range"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/infants" />
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/people_number_bottom_sheet_recycler_view"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/done_button"-->
+<!--        tools:listitem="@layout/people_number_bottom_sheet_view_holder" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

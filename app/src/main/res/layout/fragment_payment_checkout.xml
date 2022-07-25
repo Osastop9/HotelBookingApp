@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PaymentCheckoutFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/paymentOption_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/paymentOption_back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_back_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/paymentOption_toolBar_title_tv"
+                    app:layout_constraintHorizontal_bias="0.162"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    android:contentDescription="@string/payment_options"/>
+
+                <TextView
+                    android:id="@+id/paymentOption_toolBar_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment_options"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/paymentOption_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentOption_appBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/paymentOption_amountToBePaid_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="172dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="196dp"
+                android:text="@string/amount_to_be_paid"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/paymentOption_amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:padding="5dp"
+                android:hint="0.00"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/paymentOption_amountToBePaid_tv" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="@string/choose_a_payment_option"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.089"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paymentOption_amount_tv" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/paymentOption_paystack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                tools:layout_editor_absoluteX="24dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/paystacklogo" />
+
+                <TextView
+                    android:id="@+id/paymentOption_paystack_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="0dp"
+                    android:layout_weight="1.6"
+                    android:paddingVertical="20dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="10dp"
+                    android:text="Paystack"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_forward"
+                    android:contentDescription="@string/payment_options"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="#F5F5F5"
+                app:layout_constraintTop_toBottomOf="@+id/paymentOption_paystack"
+                tools:layout_editor_absoluteX="16dp" />
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:id="@+id/paymentOption_flutterwave"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paymentOption_paystack"-->
+<!--                tools:layout_editor_absoluteX="24dp">-->
+
+<!--                <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/flutterwavelogo" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginHorizontal="0dp"-->
+<!--                    android:layout_weight="1.6"-->
+<!--                    android:paddingVertical="20dp"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="10dp"-->
+<!--                    android:text="Flutterwave"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/ic_forward"-->
+<!--                    android:contentDescription="@string/payment_options"/>-->
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:background="#F5F5F5"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paymentOption_visa"-->
+<!--                tools:layout_editor_absoluteX="16dp" />-->
+
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:id="@+id/paymentOption_masterCard"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paymentOption_visa"-->
+<!--                tools:layout_editor_absoluteX="24dp">-->
+
+<!--                <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/mastercard" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginHorizontal="0dp"-->
+<!--                    android:layout_weight="1.6"-->
+<!--                    android:paddingVertical="20dp"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="10dp"-->
+<!--                    android:text="@string/master_card"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/ic_forward"-->
+<!--                    android:contentDescription="@string/payment_options"/>-->
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:background="#F5F5F5"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paymentOption_masterCard"-->
+<!--                tools:layout_editor_absoluteX="16dp" />-->
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:id="@+id/paymentOption_debitCard"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paymentOption_masterCard"-->
+<!--                tools:layout_editor_absoluteX="24dp">-->
+
+<!--                <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/debit_card" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginHorizontal="0dp"-->
+<!--                    android:layout_weight="1.6"-->
+<!--                    android:paddingVertical="20dp"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="10dp"-->
+<!--                    android:text="@string/debit_card"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp"/>-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/ic_forward"-->
+<!--                    android:contentDescription="@string/payment_options"/>-->
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:background="#F5F5F5"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paymentOption_debitCard"-->
+<!--                tools:layout_editor_absoluteX="16dp" />-->
+
+<!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--                android:id="@+id/paymentOption_paytm"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/paymentOption_debitCard"-->
+<!--                tools:layout_editor_absoluteX="24dp">-->
+
+<!--                <com.mikhaellopez.circularimageview.CircularImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/paytm" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginHorizontal="0dp"-->
+<!--                    android:layout_weight="1.6"-->
+<!--                    android:paddingVertical="20dp"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="10dp"-->
+<!--                    android:text="@string/paytm"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="20sp" />-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:src="@drawable/ic_forward"-->
+<!--                    android:contentDescription="@string/payment_options"/>-->
+<!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="#F5F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paymentOption_paystack" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

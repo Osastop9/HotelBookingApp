@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.PaymentDetailsFragment"
+    android:id="@+id/frameLayout3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/payment_details_pay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.092"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.072" />
+
+        <TextView
+            android:id="@+id/payment_details_safe_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your card is safe"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.436"
+            app:layout_constraintStart_toStartOf="@+id/payment_details_pay_tv"
+            app:layout_constraintTop_toBottomOf="@+id/payment_details_pay_tv"
+            app:layout_constraintVertical_bias="0.066" />
+
+        <TextView
+            android:id="@+id/payment_details_card_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Card Number"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/payment_details_pay_tv"
+            app:layout_constraintTop_toBottomOf="@+id/payment_details_safe_tv"
+            app:layout_constraintVertical_bias="0.098" />
+
+        <EditText
+            android:id="@+id/et_card_number"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:digits="0123456789- "
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:maxLength="30"
+            android:hint="**** **** **** ****"
+            android:background="@drawable/et_input_with_border_pay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/payment_details_card_number_tv"
+            app:layout_constraintTop_toBottomOf="@+id/payment_details_card_number_tv"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginRight="40dp" />
+
+
+        <TextView
+            android:id="@+id/payment_details_expiry_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Expiry"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_card_number"
+            app:layout_constraintTop_toBottomOf="@+id/et_card_number"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <EditText
+            android:id="@+id/et_expiry"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_input_with_border_pay"
+            android:hint="MM"
+            android:maxLength="2"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/payment_details_expiry_tv"
+            app:layout_constraintTop_toBottomOf="@+id/payment_details_expiry_tv"
+            app:layout_constraintVertical_bias="0.0"
+            android:paddingLeft="20dp"
+            android:paddingRight="0dp" />
+
+        <EditText
+            android:id="@+id/expYear"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="0dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/et_input_with_border_pay"
+            app:layout_constraintStart_toEndOf="@id/et_expiry"
+            app:layout_constraintTop_toTopOf="@id/et_expiry"
+            android:hint="YY"
+            android:maxLength="2"/>
+
+
+        <TextView
+            android:id="@+id/payment_details_cvv_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CVV"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/payment_details_expiry_tv"
+            app:layout_constraintEnd_toEndOf="@+id/et_card_number"
+            app:layout_constraintHorizontal_bias="0.554"
+            app:layout_constraintStart_toEndOf="@+id/payment_details_expiry_tv"
+            app:layout_constraintTop_toTopOf="@+id/payment_details_expiry_tv"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/et_cvv"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/et_input_with_border_pay"
+            android:digits="0123456789"
+            android:hint="***"
+            android:inputType="number"
+            android:maxLength="3"
+            android:layout_marginTop="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_card_number"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/payment_details_cvv_tv"
+            app:layout_constraintTop_toBottomOf="@+id/payment_details_cvv_tv"
+            app:layout_constraintVertical_bias="0.0"
+            android:paddingLeft="20dp"
+            android:paddingRight="0dp" />
+
+        <Button
+            android:id="@+id/payment_details_pay_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:text=""
+            android:background="@color/splash_screen_background_color"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_cvv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_expiry"
+            app:layout_constraintTop_toBottomOf="@+id/et_expiry"
+            app:layout_constraintVertical_bias="0.243" />
+
+        <ProgressBar
+            android:id="@+id/payment_details_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_bias="0.479"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_expiry"
+            app:layout_constraintVertical_bias="0.249" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_padlock"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.279"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_details_pay_button"
+            app:layout_constraintVertical_bias="0.478" />
+
+        <TextView
+            android:id="@+id/payment_details_secure_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Secured by Paystack"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginLeft="10dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

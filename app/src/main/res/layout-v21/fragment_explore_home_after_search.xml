@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ExploreHomeAfterSearchFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/exploreHomeAfterSearch_appToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="10dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="lollipop">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="@string/imageview"
+                android:src="@drawable/ic_location_icon"
+                android:backgroundTint="#FCEA0707"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:paddingVertical="14dp"
+                android:text="@string/banglore"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="72dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/explore"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/explore_home_after_search_filter_img_btn"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/explore_home_after_search_filter_img_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="8dp"
+                android:contentDescription="@string/imageview"
+                android:src="@drawable/ic_filter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/explore_home_after_search_filter_tv"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.6" />
+
+            <TextView
+                android:id="@+id/explore_home_after_search_filter_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="18dp"
+                android:paddingTop="15dp"
+                android:text="@string/filter_icon"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/exploreHomeAfterSearchScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exploreHomeAfterSearch_appToolBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollViewConstraints"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/explore_home_after_search_card_view_tv_display_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="#FCEA0707"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/imageFilterView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="28dp"
+                        app:tint="@color/white"
+                        android:src="@drawable/ic_filter"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/explore_text_1"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/we_have_deals_for"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        app:flow_verticalAlign="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.625"
+                        app:layout_constraintStart_toEndOf="@+id/imageFilterView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/explore_text_2"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/your_favourite_and_relaxing"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="23sp"
+                        app:flow_verticalAlign="center"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/imageFilterView"
+                        app:layout_constraintTop_toBottomOf="@+id/explore_text_1" />
+
+                    <TextView
+                        android:id="@+id/explore_text_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:padding="5dp"
+                        android:text="@string/stay"
+                        android:textAlignment="textStart"
+                        android:textColor="#FCE4EC"
+                        android:textSize="25sp"
+                        app:flow_verticalAlign="center"
+                        app:layout_constraintEnd_toEndOf="@+id/explore_home_after_search_view_and_arrow_btn"
+                        app:layout_constraintHorizontal_bias="0.032"
+                        app:layout_constraintStart_toEndOf="@+id/imageFilterView"
+                        app:layout_constraintTop_toBottomOf="@+id/explore_text_2"
+                        tools:ignore="TextContrastCheck" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/explore_home_after_search_view_and_arrow_btn"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:background="#CEEAE2F2"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/explore_text_2"
+                        app:layout_constraintVertical_bias="0.937">
+
+                        <TextView
+                            android:id="@+id/explore_home_after_search_cardview_view_textview"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:padding="8dp"
+                            android:paddingStart="20dp"
+                            android:alpha="1"
+                            android:textColor="@color/white"
+                            android:paddingEnd="1dp"
+                            android:text="@string/view"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/button_first"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:alpha="0.3"
+                            android:contentDescription="@string/imageButton"
+                            android:src="@drawable/ic_forward_button"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:tint="@color/white"
+                            tools:ignore="ImageContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/exploreHomeFragmentAftersearch_top_Hotel_topHotel_tv"
+                android:layout_width="131dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/top_hotels"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/explore_home_after_search_card_view_tv_display_card" />
+
+
+            <TextView
+                android:id="@+id/exploreHomeFragmentAftersearch_top_Hotel_topHotel_viewAll_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:text="@string/view_all"
+                android:textColor="#FCEA0707"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/explore_home_after_search_card_view_tv_display_card" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/exploreHomeAfterSearchFragmentrecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/exploreHomeFragmentAftersearch_top_Hotel_topHotel_viewAll_tv"
+                tools:layout_editor_absoluteX="2dp"
+                tools:listitem="@layout/explore_home_after_search_recyclerview1_item" />
+
+            <TextView
+                android:id="@+id/topDeals_title"
+                android:layout_width="144dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/top_deals"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exploreHomeAfterSearchFragmentrecyclerView" />
+
+            <TextView
+                android:id="@+id/exploreHomeFragmentAftersearch_topDeal_viewAll_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="48dp"
+                android:padding="5dp"
+                android:text="@string/view_all"
+                android:textColor="#FCEA0707"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exploreHomeAfterSearchFragmentrecyclerView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/exploreHomeAfterSearchFragmentRecyclerView2"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/topDeals_title"
+                tools:layout_editor_absoluteX="16dp"
+                tools:listitem="@layout/explore_home_after_search_recyclerview_item_2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

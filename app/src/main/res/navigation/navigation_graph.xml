@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.SplashFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_onboarding01Fragment2"
+            app:destination="@id/onboarding01Fragment2"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_helpAndSupportFragment"
+            app:destination="@id/helpAndSupportFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_profileFragment_to_pastBookingsFragment2"
+            app:destination="@id/pastBookingsFragment2"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_profileFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_profileFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileFragment_to_updateUserProfileFragment"
+            app:destination="@id/updateUserProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreHomeFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.ExploreHomeFragment"
+        android:label="fragment_explore_home"
+        tools:layout="@layout/fragment_explore_home" >
+        <action
+            android:id="@+id/action_exploreHomeFragment_to_exploreHomeAfterSearchFragment"
+            app:destination="@id/exploreHomeAfterSearchFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_exploreHomeFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_exploreHomeFragment_to_topHotelsFragment"
+            app:destination="@id/topHotelsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_exploreHomeFragment_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_exploreHomeFragment_to_wishListFragment2"
+            app:destination="@id/wishListFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popUpTo="@id/wishListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_exploreHomeFragment_to_topDealsFragment"
+            app:destination="@id/topDealsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_exploreHomeFragment_to_allHotelsFragments"
+            app:destination="@id/allHotelsFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/wishListFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" >
+        <action
+            android:id="@+id/action_wishListFragment_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_wishListFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_wishListFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:popExitAnim="@android:anim/fade_in"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboarding01Fragment2"
+        android:name="com.decagon.hbapplicationgroupa.ui.OnboardingFragment"
+        android:label="fragment_onboarding01"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboarding01Fragment2_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpAndSupportFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.HelpAndSupportFragment"
+        android:label="fragment_help_and_support"
+        tools:layout="@layout/fragment_help_and_support" >
+        <action
+            android:id="@+id/action_helpAndSupportFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popEnterAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pastBookingsFragment2"
+        android:name="com.decagon.hbapplicationgroupa.ui.PastBookingsFragment"
+        android:label="fragment_past_bookings"
+        tools:layout="@layout/fragment_past_bookings" >
+        <action
+            android:id="@+id/action_pastBookingsFragment2_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_pastBookingsFragment2_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_pastBookingsFragment2_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingDetailsFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.BookingDetailsFragment"
+        android:label="fragment_booking_details"
+        tools:layout="@layout/fragment_booking_details" >
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_numberOfRoomsBottomSheetDialogFragment"
+            app:destination="@id/numberOfRoomsBottomSheetDialogFragment" />
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_numberOfPeopleBottomSheetDialogFragment"
+            app:destination="@id/numberOfPeopleBottomSheetDialogFragment" />
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_paymentCheckoutFragment"
+            app:destination="@id/paymentCheckoutFragment" />
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/hotelDescription2Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_pastBookingsFragment2"
+            app:destination="@id/pastBookingsFragment2"
+            app:enterAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_out"
+            app:popUpTo="@id/pastBookingsFragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_topDealsFragment"
+            app:destination="@id/topDealsFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/topDealsFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_allHotelsFragments"
+            app:destination="@id/allHotelsFragments" />
+
+        <argument
+            android:name="hotelId"
+            app:argType="string" />
+        <argument
+            android:name="roomItem"
+            app:argType="com.decagon.hbapplicationgroupa.model.hotelmodule.gethotelbyid.GetHotelByIdResponseItemRoomTypes"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_bookingDetailsFragment_to_paymentCheckoutFragment2"
+            app:destination="@id/paymentCheckoutFragment" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/numberOfRoomsBottomSheetDialogFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.NumberOfRoomsBottomSheetDialogFragment"
+        android:label="fragment_number_of_rooms_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_number_of_rooms_bottom_sheet_dialog" >
+        <action
+            android:id="@+id/action_numberOfRoomsBottomSheetDialogFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment" />
+    </dialog>
+    <dialog
+        android:id="@+id/numberOfPeopleBottomSheetDialogFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.NumberOfPeopleBottomSheetDialogFragment"
+        android:label="fragment_number_of_people_bottom_sheet_dialog"
+        tools:layout="@layout/fragment_number_of_people_bottom_sheet_dialog" >
+        <action
+            android:id="@+id/action_numberOfPeopleBottomSheetDialogFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/ratingFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.RatingFragment"
+        android:label="fragment_rating"
+        tools:layout="@layout/fragment_rating" >
+        <action
+            android:id="@+id/action_ratingFragment_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment"
+            app:exitAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/hotelDescription2Fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_ratingFragment_to_writeAReviewFragment"
+            app:destination="@id/writeAReviewFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <argument
+            android:name="postReviewHotelId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/hotelDescription2Fragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.HotelDescription2Fragment"
+        android:label="fragment_hotel_description2"
+        tools:layout="@layout/fragment_hotel_description2" >
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_to_ratingFragment"
+            app:destination="@id/ratingFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_to_topHotelsFragment"
+            app:destination="@id/topHotelsFragment"
+            app:exitAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/topHotelsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_to_wishListFragment"
+            app:destination="@id/wishListFragment"
+            app:exitAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:enterAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_out"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_to_topDealsFragment"
+            app:destination="@id/topDealsFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/topDealsFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_to_allHotelsFragments"
+            app:destination="@id/allHotelsFragments" />
+
+        <argument
+            android:name="hotelId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_hotelDescription2Fragment_self"
+            app:destination="@id/hotelDescription2Fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/writeAReviewFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.WriteAReviewFragment"
+        android:label="fragment_write_a_review"
+        tools:layout="@layout/fragment_write_a_review" >
+        <action
+            android:id="@+id/action_writeAReviewFragment_to_ratingFragment"
+            app:destination="@id/ratingFragment"
+            app:exitAnim="@android:anim/fade_out"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/ratingFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="postReviewHotelId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_privacyPolicyFragment"
+            app:destination="@id/privacyPolicyFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/action_registerFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_onboarding01Fragment2"
+            app:destination="@id/onboarding01Fragment2"
+            app:popUpTo="@id/onboarding01Fragment2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_pendingConfirmation"
+            app:destination="@id/pendingConfirmation" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment2"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password">
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:action="ACTION_VIEW"
+            app:uri="http://www.example.com/ResetPassword/{token}/{email}" />
+        <argument
+            android:name="token"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="email"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreHomeAfterSearchFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.ExploreHomeAfterSearchFragment"
+        android:label="fragment_explore_home_after_search"
+        tools:layout="@layout/fragment_explore_home_after_search" >
+        <action
+            android:id="@+id/action_exploreHomeAfterSearchFragment_to_topHotelsFragment"
+            app:destination="@id/topHotelsFragment" />
+        <action
+            android:id="@+id/action_exploreHomeAfterSearchFragment_to_topHotelsFragment2"
+            app:destination="@id/topHotelsFragment" />
+        <action
+            android:id="@+id/action_exploreHomeAfterSearchFragment_to_topHotelsFragment3"
+            app:destination="@id/topHotelsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_exploreHomeAfterSearchFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_exploreHomeAfterSearchFragment_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/topHotelsFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.TopHotelsFragment"
+        android:label="fragment_top_hotels"
+        tools:layout="@layout/fragment_top_hotels" >
+        <action
+            android:id="@+id/action_topHotelsFragment_to_exploreHomeAfterSearchFragment"
+            app:destination="@id/exploreHomeAfterSearchFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/exploreHomeAfterSearchFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_topHotelsFragment_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_topHotelsFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_topHotelsFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookingConfirmationFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.BookingConfirmationFragment"
+        android:label="fragment_booking_confirmation"
+        tools:layout="@layout/fragment_booking_confirmation" >
+        <action
+            android:id="@+id/action_bookingConfirmationFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.PrivacyPolicyFragment"
+        android:label="fragment_privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" >
+        <action
+            android:id="@+id/action_privacyPolicyFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_privacyPolicyFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentCheckoutFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.PaymentCheckoutFragment"
+        android:label="fragment_payment_checkout"
+        tools:layout="@layout/fragment_payment_checkout" >
+        <action
+            android:id="@+id/action_paymentCheckoutFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment"
+            app:popUpTo="@id/bookingDetailsFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_paymentCheckoutFragment_to_paymentDetailsFragment"
+            app:destination="@id/paymentDetailsFragment" />
+        <argument
+            android:name="checkIn"
+            app:argType="string" />
+        <argument
+            android:name="checkOut"
+            app:argType="string" />
+        <argument
+            android:name="numberOfPeople"
+            app:argType="integer" />
+        <argument
+            android:name="roomId"
+            app:argType="string" />
+        <argument
+            android:name="price"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/topDealsFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.TopDealsFragment"
+        android:label="fragment_top_deals"
+        tools:layout="@layout/fragment_top_deals" >
+        <action
+            android:id="@+id/action_topDealsFragment_to_exploreHomeFragment"
+            app:destination="@id/exploreHomeFragment"
+            app:popExitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/exploreHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_topDealsFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_topDealsFragment_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:popEnterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailConfirmation"
+        android:name="com.decagon.hbapplicationgroupa.ui.EmailConfirmation"
+        android:label="fragment_email_comfirmation"
+        tools:layout="@layout/fragment_email_comfirmation">
+        <action
+            android:id="@+id/action_emailConfirmation_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:popEnterAnim="@anim/slide_in_left" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:action="ACTION_VIEW"
+            app:uri="http://www.example.com/ConfirmEmail/{token}/{email}" />
+        <argument
+            android:name="token"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="email"
+            android:defaultValue="null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_emailConfirmation_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendingConfirmation"
+        android:name="com.decagon.hbapplicationgroupa.ui.PendingConfirmation"
+        android:label="fragment_pending_confirmation"
+        tools:layout="@layout/fragment_pending_confirmation" >
+        <argument
+            android:name="userName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/allHotelsFragments"
+        android:name="com.decagon.hbapplicationgroupa.ui.AllHotelsFragments"
+        android:label="fragment_all_hotels_fragment"
+        tools:layout="@layout/fragment_all_hotels_fragment" >
+        <action
+            android:id="@+id/action_allHotelsFragments_to_hotelDescription2Fragment"
+            app:destination="@id/hotelDescription2Fragment" />
+        <action
+            android:id="@+id/action_allHotelsFragments_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentDetailsFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.PaymentDetailsFragment"
+        android:label="fragment_payment_details"
+        tools:layout="@layout/fragment_payment_details" >
+        <action
+            android:id="@+id/action_paymentDetailsFragment_to_bookingConfirmationFragment"
+            app:destination="@id/bookingConfirmationFragment" />
+        <argument
+            android:name="bookingReference"
+            app:argType="string" />
+        <argument
+            android:name="price"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_paymentDetailsFragment_to_paymentCheckoutFragment"
+            app:destination="@id/paymentCheckoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateUserProfileFragment"
+        android:name="com.decagon.hbapplicationgroupa.ui.UpdateUserProfileFragment"
+        android:label="fragment_update_user_profile"
+        tools:layout="@layout/fragment_update_user_profile" >
+        <action
+            android:id="@+id/action_updateUserProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <argument
+            android:name="userDetails"
+            app:argType="com.decagon.hbapplicationgroupa.model.usermodule.getuserbyid.GetUserByIdResponseItem" />
+    </fragment>
+</navigation>

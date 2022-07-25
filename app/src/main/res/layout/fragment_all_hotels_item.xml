@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="10dp"
+    android:id="@+id/allHotelsView"
+    app:cardElevation="30dp">
+
+    <!--    Fixed some constraint layout issues-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/allHotels_recyclerview_imageview"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:contentDescription="@string/ignore"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hotel_merdan_palace_turkey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/allHotels_recyclerview_imageview_save"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_outline_bookmark_border_24"
+            android:tint="#FCEA0707"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/allHotels_recyclerview_imageview" />
+
+        <TextView
+            android:id="@+id/allHotels_recyclerview_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/save"
+            android:textColor="#FCEA0707"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/allHotels_recyclerview_imageview_save"
+            app:layout_constraintTop_toBottomOf="@+id/allHotels_recyclerview_imageview" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/allHotelsBookBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Preview"
+            android:textColor="#FCEA0707"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:background="@drawable/outline_button_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/allHotels_recyclerview_imageview"/>
+
+        <TextView
+            android:id="@+id/allHotels_recyclerview_hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="144dp"
+            android:shadowColor="@color/black"
+            android:text="@string/merdan_place_turkey"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/allHotels_recyclerview_imageview"
+            app:layout_constraintTop_toTopOf="@+id/allHotels_recyclerview_imageview" />
+
+        <TextView
+            android:id="@+id/allHotels_recyclerview_hotel_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_9_star_hotel"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/allHotels_recyclerview_hotel_name"
+            app:layout_constraintTop_toBottomOf="@+id/allHotels_recyclerview_hotel_name"
+            tools:layout_editor_absoluteY="171dp" />
+
+        <TextView
+            android:id="@+id/allHotels_recyclerview_hotel_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="7dp"
+            android:padding="1dp"
+            android:text="@string/_99"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/allHotels_recyclerview_hotel_status"
+            app:layout_constraintStart_toEndOf="@+id/allHotels_recyclerview_hotel_status"/>
+
+        <ImageView
+            android:id="@+id/allHotels_imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_thumb_up"
+            app:layout_constraintBottom_toBottomOf="@id/allHotels_recyclerview_hotel_rating"
+            app:layout_constraintStart_toEndOf="@id/allHotels_recyclerview_hotel_rating"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/ignore"/>
+
+
+        <TextView
+            android:id="@+id/allHotels_recyclerview_hotel_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/_7554"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/allHotels_recyclerview_hotel_name" />
+
+        <TextView
+            android:id="@+id/allHotels_recyclerview_hotel_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/per_night"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/allHotels_recyclerview_hotel_status"
+            app:layout_constraintEnd_toEndOf="@+id/allHotels_recyclerview_imageview"
+            app:layout_constraintVertical_bias="0.285" />
+
+
+        <TextView
+            android:id="@+id/tv_notification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="No Hotel found in this location"
+            android:textSize="28sp"
+            android:layout_marginTop="40dp"
+            android:visibility="gone"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,201 @@
+<resources>
+    <string name="app_name">HBApplicationGroupA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="explore">Explore</string>
+    <string name="banglore">Banglore</string>
+    <string name="filter_icon">filter</string>
+    <string name="stay">stay</string>
+    <string name="book_now">Book Now</string>
+    <string name="_99">99%</string>
+    <string name="per_night">per night</string>
+    <string name="imageview">imageView</string>
+    <string name="we_have_deals_for">We have deals for</string>
+    <string name="your_favourite_and_relaxing">your favourite and relaxing</string>
+    <string name="view">View</string>
+    <string name="imageButton">imageButton</string>
+    <string name="view_all">View All</string>
+    <string name="top_deals">Top Deals</string>
+    <string name="top_hotels">Top Hotels</string>
+    <string name="imagebutton">imageButton</string>
+
+    // string resource added by benjamin
+    <string name="price">N6999</string>
+    <string name="hotelRating">5 star hotel .96%</string>
+    <string name="nameOfHotel">Taj WestSide</string>
+    <string name="infoCollected"> While registering as a new user on
+        the app, you may have to provide us with some information that reveals your identity. These
+        can also be information collected when booking a room in our hotel and making payment or when
+        updating your user profile. Examples of these information includes; name, email, address,
+        phone number, payment card information amongst others.</string>
+    <string name="infoFromUseOfApp">
+         We also collect information from you when you
+        browse through our app or use make use of certain services at the hotel such as wireless
+        internet services. Examples of information collected here are country details, IP address
+        and other features concerning your device may be collected too.</string>
+
+    <string name="privacyPolicy">The privacy of the information you provided to us is of topmost
+        importance. Which is why we drafted below the ways by which we collect, use and protect the
+        information provided to us by you, either by browsing through our apps to see the details of
+        our prestigious hotel or just by you actually booking a room with us.
+        You are however not  obligated to provide us with your personal information. Note that if
+        you do not, we might be left with no choice than not to attend to you. Therefore, by using
+        this app, you are aware of what information about you are being collected, stored, and
+        disclosed as set out in the policy below.
+        This policy was last updated October 20th, 2021.</string>
+
+    <string name="why_we_collect_info_text">Information collected by the above means is to ease the
+        process of booking a room prior to stay by sending your details to the hotel and/or
+        communication prior to stay. We also collect information for communication and satisfaction
+        surveys on post-stay so as to get feedbacks on your experience and how we can improve our
+        services in order to serve you better.
+        Also in some cases where we have your permission, we may send you marketing communications
+        such as discounts and latest updates in our hotels.</string>
+    <string name="how_we_protect_information_text">Here in our company, we take utmost precautions
+        to make sure your information are protected from misuse, unauthorised access, loss,
+        interference and disclosure. However, safety of information can never be completely
+        guaranteed but understand that we put the necessary security safeguards in place to protect
+        it.</string>
+    <string name="changes_to_privacy_policy_text">However we retain the utmost right to make
+        amendments to the privacy and policy as need arises. Please ensure you check the privacy
+        policy from time to time to be abreast of any changes made.</string>
+    <string name="contact_us_text">If you have any questions or more clarification about the privacy
+        and policy, you can contact us through our phone contact, email or address as specified
+        below.</string>
+
+    <string name="hotel_voyage_privacy_policy"><u>Hotel Voyage Privacy Policy</u>  </string>
+    <string name="information_we_collect"><u>Information We Collect</u></string>
+    <string name="why_we_collect_information"><u>Why We Collect Personal Information</u></string>
+    <string name="how_we_protect_information"><u>How Information Collected Are Protected</u></string>
+    <string name="changes_to_privacy_policy"><u>Changes To This Privacy and Policy</u></string>
+    <string name="contact_us"><u>How To Contact Us</u></string>
+    <string name="contact"><u>+234 8136678673</u></string>
+    <string name="email"><u>Decagon@gmail.com</u></string>
+    <string name="address">No 32, Okuorhomi community, along estate gate. Edo, Benin city</string>
+
+    //_________________________________________________
+
+
+    //profile_fragment
+    <string name="fragment_profile_name">Kiran Carmen</string>
+    <string name="fragment_profile_email">kcarmen@gmail.com</string>
+    <string name="fragment_profile_title">Edit profile</string>
+
+    //booking fragment layout
+    <string name="fragment_booking_time">Today, 07:45am</string>
+    <string name="fragment_booking_hotel">Sheraton Grand</string>
+    <string name="fragment_booking_location">Marathalli, Bangalore, India</string>
+    <string name="fragment_booking_amount">$6999</string>
+
+    //help and support layout
+    <string name="fragment_help_intro">Hi, Karen. How can we help?</string>
+    <string name="fragment_help_address">7, Asajon way, Sangotedo, Eti-Osa, Lagos.</string>
+    <string name="fragment_help_contact">08022320123, 08034343434 </string>
+    <string name="hotel_desc_gallery">Gallery</string>
+    <string name="hotel_desc_park_plaza">Park Plaza</string>
+    <string name="hotel_description">Renowned for creating memorable moments, Park Plaza caters to both leisure and business travellers with stylish guest rooms and versatile meeting facilities which are perfectly complemented by award-winning restaurants and bars. We present a wide choice of travel destinations and accommodation options, from vibrant city-centre hotels to tranquil beach-side resorts, all united by authentic service and modern, inviting spaces.</string>
+    <string name="hotel_desc_amenities">Amenities</string>
+    <string name="hotel_desc_toast_string_one">This should navigate to a gallery</string>
+    <string name="hotel_desc_toast_string_two">This should navigate to a map</string>
+    <string name="hotel_desc_toast_string_three">This should bring more Amenities option</string>
+    <string name="hotel_desc_toast_string_four">This should navigate to a Bookings</string>
+    <string name="hotel_desc_toast_string_five">This should bookmark Hotels</string>
+    <string name="rating_post_btn_toast">This should navigate to Write A Review</string>
+    <string name="rating_back_btn_toast">This should go back to the previous Fragment</string>
+    <string name="login">Already a member? <u>Login</u> here</string>
+    <string name="registration_registerTextview">Register</string>
+    <string name="registration_hintName">Last Name</string>
+    <string name="t_c_and_privacy_policy"> I hereby agree to the <u><![CDATA[T&C and Privacy Policy.]]></u></string>
+    <string name="registration_login"><u>Login</u></string>
+    <string name="registration_email_field">Email</string>
+    <string name="login_welcome_back_textview">welcome_back</string>
+    <string name="login_email">Email</string>
+    <string name="login_forgot_password_text">Forgot Password?</string>
+    <string name="login_don_t_have_account_text">don_t_have_account</string>
+    <string name="login_dont_have_acct_text">Don\'t have account?</string>
+    <string name="login_register_text"><u>Register</u> here</string>
+    <string name="payment_options">Payment Options</string>
+    <string name="choose_a_payment_option">Choose a payment option</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="forgot_password_textview">Forgot Password</string>
+    <string name="forgot_password_login"><u>Login</u></string>
+    <string name="_7554">$7554</string>
+    <string name="_7999"> <strike> $7999 </strike> </string>
+    <string name="master_card">Master Card</string>
+    <string name="filter_by">Filter By</string>
+    <string name="save">Save</string>
+    <string name="amount_to_be_paid">Amount to be paid</string>
+    <string name="_6998_00">$6998.00</string>
+    <string name="visa">VISA</string>
+    <string name="debit_card">Debit Card</string>
+    <string name="paytm">Paytm</string>
+    <string name="merdan_place_turkey">Merdan Place Turkey</string>
+    <string name="_9_star_hotel">4 Star Hotel</string>
+    <string name="meridian_palace">Meridian Palace</string>
+    <string name="ignore">ignore</string>
+    <string name="logout">Logout</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="help_amp_support"><![CDATA[Help & Support]]></string>
+    <string name="bookings_history">Bookings History</string>
+    <string name="my_account">My Account</string>
+    <string name="profile">Profile</string>
+    <string name="password_should_contain_atleast_one_uppercase_letter_digit_special_character">password should contain atleast one uppercase letter,digit,special character</string>
+    <string name="new_password">New Password</string>
+    <string name="allhotels">allhotels</string>
+    <string name="hotels">Hotels</string>
+    <string name="preview">Preview</string>
+    <string name="gra_ikeja_lagos">GRA, Ikeja, Lagos</string>
+    <string name="room">Room</string>
+    <string name="expiry_slash">%1$s/</string>
+    <string name="expiry_space"> %1$s</string>
+
+    <string-array name="gender">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
+    // String array for filtering All Hotel
+    <string-array name="states">
+        <item>All Hotel</item>
+        <item>Abia</item>
+        <item>Adamawa</item>
+        <item>Akwa-Ibom</item>
+        <item>Anambra</item>
+        <item>Bauchi</item>
+        <item>Bayesa</item>
+        <item>Benue</item>
+        <item>Borno</item>
+        <item>Delta</item>
+        <item>Ebonyi</item>
+        <item>Edo</item>
+        <item>Ekiti</item>
+        <item>Enugu</item>
+        <item>Gombe</item>
+        <item>Imo</item>
+        <item>Jigawa</item>
+        <item>Kaduna</item>
+        <item>Kano</item>
+        <item>Katsina</item>
+        <item>Kebbi</item>
+        <item>Kogi</item>
+        <item>Kwara</item>
+        <item>Lagos</item>
+        <item>Nasarawa</item>
+        <item>Niger</item>
+        <item>Ogun</item>
+        <item>Ondo</item>
+        <item>Osun</item>
+        <item>Oyo</item>
+        <item>Plateau</item>
+        <item>Rivers</item>
+        <item>Sokoto</item>
+        <item>Taraba</item>
+        <item>Yobe</item>
+        <item>Zamfara</item>
+        <item>Fct-Abuja</item>
+
+
+    </string-array>
+</resources>
